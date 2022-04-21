@@ -47,7 +47,7 @@ namespace Webservice.Controllers{
         public static string Connect(){
             SqlConnection cnn;
             string ans="Not Thing";
-            string connetionString = "Data Source=0.tcp.ap.ngrok.io:12065;Initial Catalog=test;User ID=bank;Password=1234";
+            string connetionString = "Data Source=0.tcp.ap.ngrok.io,12065;Initial Catalog=test;User ID=bank;Password=1234";
             cnn = new SqlConnection(connetionString);
             try{
                 cnn.Open();
@@ -55,7 +55,7 @@ namespace Webservice.Controllers{
                 cnn.Close();
             }
             catch (Exception ex){
-                ans = "FALSE";
+                ans = "FALSE"+ex;
             }
 
             return ans;
