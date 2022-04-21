@@ -46,19 +46,33 @@ namespace Webservice.Controllers{
 
         public static string Connect(){
             SqlConnection cnn;
-            string ans="Not Thing";
+            string ans="";
+            datapull testdata = new datapull();
+
             string connetionString = "Data Source=0.tcp.ap.ngrok.io,12065;Initial Catalog=test;User ID=bank;Password=1234";
             cnn = new SqlConnection(connetionString);
             try{
+                // cnn.Open();
+                // ans = "TRUE";
+                string Ostring = "Select * from Table_7";
+                SqlCommand oCmd = new SqlCommand(Ostring, cnn);
                 cnn.Open();
-                ans = "TRUE";
+                using (SqlDataReader oReader = oCmd.ExecuteReader()){
+                    // while(oReader.Read()){
+                    //     // testdata.Name = oReader.ToString();
+                    //     testdata.Name = oReader["Name"].ToString();
+                    //     ans = ans + testdata.Name;
+                    // 
+                    testdata.Name = oReader.GetData(1).ToString();
+                }
                 cnn.Close();
+                // ans = ans + "TRUE "+ testdata.Name;
             }
             catch (Exception ex){
                 ans = "FALSE"+ex;
             }
 
-            return ans;
+            return testdata.Name;
 
         }
     }

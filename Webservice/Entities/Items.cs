@@ -1,10 +1,10 @@
 
 namespace Webservice.Entities
 {
-
-    // private String Getconnect(){
-    //     string cs = @"Data Source"
-    // }
+    public record datapull{
+        public string Name {get; set;}
+        public DateTime Datetime{get; init;}
+    }
     public record Items{
 
         public Guid Id {get; init;}
