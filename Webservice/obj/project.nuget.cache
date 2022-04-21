@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f3iCli1GTemQfUqzCTXcY5vd5X9+QdO6TVpaGUuWnUJm7V2DMzyjL+Epgpf/iHKkuvgaxFuuVhP8/F52M9XJTg==",
+  "dgSpecHash": "UYVtsxUQ/byuCTp1Ge2XP0EHNbfPj4fdj86AkiYryvAaJ8MNvJJYHViu89Azz0z6GkE8028bPimaMN9x2bWymQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pawat\\Desktop\\BANK\\TestPT\\Webservice\\Webservice.csproj",
+  "projectFilePath": "C:\\Users\\pawat\\Desktop\\BANK\\TestPT\\TestDotNet\\Webservice\\Webservice.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pawat\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\pawat\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pawat\\Desktop\\BANK\\TestPT\\Webservice\\Webservice.csproj": {}
+    "C:\\Users\\pawat\\Desktop\\BANK\\TestPT\\TestDotNet\\Webservice\\Webservice.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pawat\\Desktop\\BANK\\TestPT\\Webservice\\Webservice.csproj": {
+    "C:\\Users\\pawat\\Desktop\\BANK\\TestPT\\TestDotNet\\Webservice\\Webservice.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pawat\\Desktop\\BANK\\TestPT\\Webservice\\Webservice.csproj",
+        "projectUniqueName": "C:\\Users\\pawat\\Desktop\\BANK\\TestPT\\TestDotNet\\Webservice\\Webservice.csproj",
         "projectName": "Webservice",
-        "projectPath": "C:\\Users\\pawat\\Desktop\\BANK\\TestPT\\Webservice\\Webservice.csproj",
+        "projectPath": "C:\\Users\\pawat\\Desktop\\BANK\\TestPT\\TestDotNet\\Webservice\\Webservice.csproj",
         "packagesPath": "C:\\Users\\pawat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pawat\\Desktop\\BANK\\TestPT\\Webservice\\obj\\",
+        "outputPath": "C:\\Users\\pawat\\Desktop\\BANK\\TestPT\\TestDotNet\\Webservice\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pawat\\AppData\\Roaming\\NuGet\\NuGet.Config"
