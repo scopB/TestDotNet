@@ -39,14 +39,15 @@ namespace Webservice.Controllers{
         }
 
         [HttpGet("sql")]
-        public string Connectsql(){
-            string ans = Connect();
+        public List<string> Connectsql(){
+            List<string> ans = Connect();
             return ans;
         }
 
-        public static string Connect(){
+        public static List<string> Connect(){
             SqlConnection cnn;
             string ans="";
+            List<string> test_sendlist = new List<string>();
             datapull testdata = new datapull();
 
             string connetionString = "Data Source=0.tcp.ap.ngrok.io,12065;Initial Catalog=test;User ID=bank;Password=1234";
@@ -58,21 +59,23 @@ namespace Webservice.Controllers{
                 SqlCommand oCmd = new SqlCommand(Ostring, cnn);
                 cnn.Open();
                 using (SqlDataReader oReader = oCmd.ExecuteReader()){
-                    // while(oReader.Read()){
-                    //     // testdata.Name = oReader.ToString();
-                    //     testdata.Name = oReader["Name"].ToString();
-                    //     ans = ans + testdata.Name;
-                    // 
-                    testdata.Name = oReader.GetData(1).ToString();
-                }
+                    while(oReader.Read()){
+                        // testdata.Name = oReader.ToString();
+                        testdata.Name = oReader["Name"].ToString();
+                        ans = ans + testdata.Name;
+                        test_sendlist.Add(testdata.Name);
+                    
+                    // testdata.Name = oReader.GetData(1).ToString();
+                    }
                 cnn.Close();
                 // ans = ans + "TRUE "+ testdata.Name;
+                }
             }
             catch (Exception ex){
                 ans = "FALSE"+ex;
             }
 
-            return testdata.Name;
+            return test_sendlist;
 
         }
     }
